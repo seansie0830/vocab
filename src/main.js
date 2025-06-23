@@ -4,7 +4,7 @@
     import 'bootstrap-icons/font/bootstrap-icons.css' 
     import './style.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
+import 'bootstrap'
     import App from './App.vue'
     import store from './store'
     import router from './router'
@@ -20,7 +20,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
     app.use(store)
     app.use(router)
-
+store.dispatch('loadState');
     store.dispatch('initializeApp');
 
     app.mount('#app')

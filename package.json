@@ -10,8 +10,10 @@
         "test": "vitest"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.7",
         "bootstrap-icons": "^1.13.1",
+        "uuid": "^11.1.0",
         "vue": "^3.5.13",
         "vue-router": "4",
         "vuex": "4"
@@ -20,6 +22,7 @@
         "@vitejs/plugin-vue": "^5.2.3",
         "@vue/test-utils": "^2.4.6",
         "jsdom": "^26.1.0",
+        "lightningcss": "^1.30.1",
         "vite": "^6.3.5",
         "vitest": "^3.2.4"
     }

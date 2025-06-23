@@ -1,108 +1,175 @@
 <template>
-  <!-- 使用 Bootstrap 的 Grid 系統來建立一個更具質感的佈局 -->
-  <div class="row justify-content-center">
-    <div class="col-md-10 col-lg-8">
-      
-      <WordSearch v-model="searchTerm" />
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <h2 class="mb-0">單字列表</h2>
+      <button class="btn btn-primary" @click="openModalForNew">
+        <i class="bi bi-plus-circle-fill me-2"></i>新增單字
+      </button>
+    </div>
 
-      <h2 class="mb-4">單字列表</h2>
-      
-      <div v-if="filteredWords.length === 0" class="alert alert-info shadow-sm">
-        找不到符合條件的單字。
-      </div>
+    <WordSearch v-model="searchQuery" class="mb-4" />
 
-      <div v-else class="list-group shadow-sm">
-        <div v-for="word in filteredWords" :key="word.id" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-          <div>
-            <h5 class="mb-1">{{ word.term }}</h5>
-            <p class="mb-1">{{ word.definition }}</p>
-            <!-- 為每個單字顯示其對應的標籤 -->
-            <div class="mt-2">
-              <span 
-                v-for="tagId in word.tagIds.slice(0, TAG_DISPLAY_LIMIT)" 
-                :key="tagId" 
-                class="badge rounded-pill me-1" 
-                :style="{ backgroundColor: getTagColor(tagId), color: '#fff' }"
-              >
-                {{ getTagName(tagId) }}
-              </span>
-              <span v-if="word.tagIds.length > TAG_DISPLAY_LIMIT" class="badge rounded-pill bg-secondary">
-                +{{ word.tagIds.length - TAG_DISPLAY_LIMIT }} 更多
-              </span>
-            </div>
-            <small class="text-muted mt-2 d-block">備註: {{ word.notes || '無' }}</small>
+
+    <div v-if="filteredWords.length > 0" class="list-group">
+      <div v-for="word in filteredWords" :key="word.id" class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+        <div class="word-details">
+          <h5 class="mb-1">{{ word.text }}</h5>
+          <p class="mb-1 text-secondary">{{ word.definition }}</p>
+          <div v-if="word.tags && word.tags.length > 0" class="mt-2">
+            <span v-for="tag in getDisplayTags(word.tags)" :key="tag.id || 'more-tags-indicator'" 
+                  class="badge rounded-pill me-1"
+                  :class="tag.name === '...' ? 'bg-secondary' : getTagColorClass(tag.id)">
+              {{ tag.name }}
+            </span>
           </div>
-          <div>
-            <button class="btn btn-sm btn-outline-primary me-2">編輯</button>
-            <!-- 更新：為刪除按鈕加上 click 事件處理 -->
-            <button class="btn btn-sm btn-outline-danger" @click="deleteWord(word.id)">刪除</button>
-          </div>
+        </div>
+        <div class="word-actions mt-2 mt-md-0">
+          <button class="btn btn-sm btn-outline-secondary me-2" @click="openModalForEdit(word)">
+            <i class="bi bi-pencil-fill"></i> 編輯
+          </button>
+          <button class="btn btn-sm btn-outline-danger" @click="handleDelete(word.id)">
+            <i class="bi bi-trash-fill"></i> 刪除
+          </button>
         </div>
       </div>
     </div>
+    <div v-else class="alert alert-warning" role="alert">
+      <p class="mb-0" v-if="searchQuery">找不到符合 "<b>{{ searchQuery }}</b>" 的單字。</p>
+      <p class="mb-0" v-else>目前沒有任何單字，點擊「新增單字」來加入你的第一個單字吧！</p>
+    </div>
+
+    <WordEditorModal 
+      v-if="showModal"
+      :show="showModal" 
+      :word="editingWord" 
+      @close="closeModal" 
+      @save="handleSave" 
+    />
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
-import WordSearch from '../components/WordSearch.vue';
+import WordEditorModal from '../components/WordEditorModal.vue';
+import WordSearch from '../components/wordSearch.vue';
 
-export default {
-  name: 'HomePage',
-  components: {
-    WordSearch,
-  },
-  setup() {
-    const store = useStore();
-    const searchTerm = ref('');
-    const TAG_DISPLAY_LIMIT = 3;
+const store = useStore();
 
-    const filteredWords = computed(() => {
-      const term = searchTerm.value.trim();
-      if (!term) return store.state.words;
-      if (term.startsWith('#')) {
-        const tagName = term.substring(1).toLowerCase();
-        if (!tagName) return store.state.words;
-        const tag = Object.values(store.state.tags).find(t => t.name.toLowerCase() === tagName);
-        if (!tag) return [];
-        return store.state.words.filter(word => word.tagIds && word.tagIds.includes(tag.id));
-      } else {
-        const lowerCaseSearchTerm = term.toLowerCase();
-        return store.state.words.filter(word => 
-          word.term.toLowerCase().includes(lowerCaseSearchTerm) || 
-          word.definition.toLowerCase().includes(lowerCaseSearchTerm)
-        );
-      }
-    });
+const showModal = ref(false);
+const editingWord = ref(null);
+const searchQuery = ref('');
 
-    const getTagName = (tagId) => store.state.tags[tagId]?.name || '未知標籤';
-    const getTagColor = (tagId) => store.state.tags[tagId]?.color || '#6c757d';
+const words = computed(() => store.state.words);
+const allTags = computed(() => store.state.tags);
 
-    // 新增：刪除單字的方法
-    const deleteWord = (wordId) => {
-      // 在真實的應用中，這裡應該會顯示一個更美觀的確認對話框
-      // 但為了簡單起見，我們先使用瀏覽器內建的 confirm
-      if (window.confirm('您確定要刪除這個單字嗎？')) {
-        store.commit('DELETE_WORD', wordId);
-      }
-    };
+const filteredWords = computed(() => {
+  const query = searchQuery.value.trim().toLowerCase();
+  if (!query) {
+    return words.value;
+  }
+  return words.value.filter(word => 
+    word.text.toLowerCase().includes(query) || 
+    word.definition.toLowerCase().includes(query)
+  );
+});
 
-    return {
-      searchTerm,
-      filteredWords,
-      getTagName,
-      getTagColor,
-      TAG_DISPLAY_LIMIT,
-      deleteWord, // 將方法回傳給模板使用
-    };
-  },
+// The handleSearch function is no longer needed because of v-model
+// const handleSearch = (newQuery) => { ... };
+
+const openModalForNew = () => {
+  editingWord.value = null;
+  showModal.value = true;
 };
+
+const openModalForEdit = (word) => {
+  editingWord.value = JSON.parse(JSON.stringify(word));
+  showModal.value = true;
+};
+
+const closeModal = () => {
+  showModal.value = false;
+  editingWord.value = null;
+};
+
+const handleSave = (wordData) => {
+  if (wordData.id) {
+    store.dispatch('updateWord', wordData);
+  } else {
+    store.dispatch('addWord', wordData);
+  }
+  closeModal();
+};
+
+const handleDelete = (wordId) => {
+  if (confirm('確定要刪除這個單字嗎？')) {
+    store.dispatch('deleteWord', wordId);
+  }
+};
+
+const tagColorClasses = [
+  'tag-color-1', 'tag-color-2', 'tag-color-3', 'tag-color-4', 'tag-color-5', 'tag-color-6'
+];
+
+const getTagColorClass = (tagId) => {
+  if (!tagId) return 'bg-secondary';
+
+  const tagIndex = store.state.tags.findIndex(tag => tag.id === tagId);
+
+  if (tagIndex === -1) {
+    return 'bg-secondary';
+  }
+  
+  const colorIndex = tagIndex % tagColorClasses.length;
+  return tagColorClasses[colorIndex];
+};
+
+const getDisplayTags = (tagIds) => {
+  if (!tagIds || tagIds.length === 0) return [];
+  
+  const tags = tagIds
+    .map(tagId => allTags.value.find(tag => tag.id === tagId))
+    .filter(Boolean);
+  
+  const TAG_LIMIT = 5;
+  if (tags.length > TAG_LIMIT) {
+    const limitedTags = tags.slice(0, TAG_LIMIT);
+    return [...limitedTags, { id: null, name: '...' }];
+  }
+  
+  return tags;
+};
+
 </script>
 
 <style scoped>
-.list-group-item h5 {
-  font-weight: 500;
+.word-details {
+  flex-grow: 1;
+  min-width: 70%;
+  padding-right: 1rem;
 }
+.word-actions {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .word-actions {
+        width: 100%;
+        text-align: right;
+        margin-top: 1rem;
+    }
+}
+
+.badge.tag-color-1 { background-color: #0d6efd; color: white; }
+.badge.tag-color-2 { background-color: #198754; color: white; }
+.badge.tag-color-3 { background-color: #6f42c1; color: white; }
+.badge.tag-color-4 { background-color: #dc3545; color: white; }
+.badge.tag-color-5 { background-color: #fd7e14; color: white; }
+.badge.tag-color-6 { background-color: #6c757d; color: white; }
 </style>
 

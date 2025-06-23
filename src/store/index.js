@@ -1,109 +1,107 @@
 import { createStore } from 'vuex';
+import { v4 as uuidv4 } from 'uuid';
 import storage from '../services/storage';
 
-export const storeConfig = {
-  state: {
-    // --- 標籤定義區 ---
-    tags: {
-      "tag-1": { "id": "tag-1", "name": "多益核心", "color": "#4287f5" },
-      "tag-2": { "id": "tag-2", "name": "英檢中級", "color": "#f542a4" },
-      "tag-3": { "id": "tag-3", "name": "學術單字", "color": "#20c997" },
-      "tag-4": { "id": "tag-4", "name": "程式設計", "color": "#fd7e14" },
-      "tag-5": { "id": "tag-5", "name": "生活常用", "color": "#6f42c1" },
-    },
-    
-    // --- 單字主資料庫 ---
-    words: [
-      {
-        "id": "word-1667826859456",
-        "term": "ubiquitous",
-        "definition": "無所不在的",
-        "tagIds": ["tag-1", "tag-2", "tag-5"],
-        "familiarityScore": 0,
-        "lastTestedAt": null,
-        "correctStreak": 0,
-        "notes": "來自電影《駭客任務》"
-      },
-      {
-        "id": "word-1667826859457",
-        "term": "photosynthesis",
-        "definition": "光合作用",
-        "tagIds": ["tag-3"],
-        "familiarityScore": 2,
-        "lastTestedAt": "2025-06-20T10:00:00Z",
-        "correctStreak": 3,
-        "notes": "生物學單字"
-      },
-      // 新增：一個擁有多個標籤的單字，用來測試省略功能
-      {
-        "id": "word-1750610000000",
-        "term": "polymorphism",
-        "definition": "多型",
-        "tagIds": ["tag-1", "tag-2", "tag-3", "tag-4", "tag-5"],
-        "familiarityScore": 4,
-        "lastTestedAt": "2025-06-21T14:00:00Z",
-        "correctStreak": 8,
-        "notes": "物件導向程式設計的重要觀念"
-      }
-    ],
+const initialState = {
+  words: [],
+  tags: [],
+};
 
-    // --- 當前考卷資料 ---
-    currentQuiz: {
-      words: [],
-      createdAt: null,
-      settings: {}
-    }
-  },
+const store = createStore({
+  state: initialState,
+
   mutations: {
-    SET_WORDS(state, wordList) {
-      state.words = wordList;
+    SET_STATE(state, loadedState) {
+      if (loadedState) {
+        state.words = loadedState.words || [];
+        state.tags = loadedState.tags || [];
+      }
+    },
+    REPLACE_ALL_DATA(state, newState) {
+        state.words = newState.words || [];
+        state.tags = newState.tags || [];
     },
     ADD_WORD(state, word) {
-      const newWord = word || { 
-        id: `word-${Date.now()}`, 
-        term: 'test word', 
-        definition: '測試單字', 
-        tagIds: [], 
-        familiarityScore: 0, 
-        lastTestedAt: null, 
-        correctStreak: 0, 
-        notes: 'Manually added for testing'
-      };
-      state.words.push(newWord);
+      state.words.push({ ...word, id: uuidv4(), tags: word.tags || [] });
     },
     UPDATE_WORD(state, updatedWord) {
       const index = state.words.findIndex(w => w.id === updatedWord.id);
       if (index !== -1) {
-        state.words[index] = updatedWord;
+        state.words[index] = { ...updatedWord, tags: updatedWord.tags || [] };
       }
     },
     DELETE_WORD(state, wordId) {
       state.words = state.words.filter(w => w.id !== wordId);
     },
-    SET_STATE(state, loadedState) {
-      Object.assign(state, loadedState);
-    }
-  },
-  actions: {
-    initializeApp({ commit }) {
-      const loadedState = storage.loadData();
-      if (loadedState) {
-        commit('SET_STATE', loadedState);
-      }
-    }
-  },
-  getters: {},
-  plugins: [
-    store => {
-      store.subscribe((mutation, state) => {
-        if (import.meta.env.DEV) {
-          console.log(`[Plugin] Mutation detected: ${mutation.type}. Saving state to localStorage.`);
+    ADD_TAG(state, newTag) {
+      state.tags.push(newTag);
+    },
+    DELETE_TAG(state, tagId) {
+      state.tags = state.tags.filter(t => t.id !== tagId);
+    },
+    REMOVE_TAG_FROM_WORDS(state, tagId) {
+      state.words.forEach(word => {
+        if (word.tags && word.tags.includes(tagId)) {
+          word.tags = word.tags.filter(tId => tId !== tagId);
         }
-        storage.saveData(state);
       });
     }
-  ]
-};
+  },
 
-export default createStore(storeConfig);
+  actions: {
+    loadState({ commit, state }) { 
+      const loadedState = storage.loadData();
+      
+      if (loadedState && loadedState.words && loadedState.words.length > 0) {
+        commit('SET_STATE', loadedState);
+      } else if (import.meta.env.DEV && state.words.length === 0) {
+        import('./mockData.json').then(mockData => {
+          console.log('DEV MODE: Loading mock data into empty store.');
+          commit('SET_STATE', mockData.default);
+        });
+      }
+    },
+    // --- MODIFIED ACTION for Import ---
+    replaceAllData({ commit, state }, newState) {
+      commit('REPLACE_ALL_DATA', newState);
+      // Explicitly save the state to storage after importing,
+      // ensuring the change is persisted immediately.
+      storage.saveData(state);
+    },
+    addWord({ commit }, word) {
+      commit('ADD_WORD', word);
+    },
+    updateWord({ commit }, word) {
+      commit('UPDATE_WORD', word);
+    },
+    deleteWord({ commit }, wordId) {
+      commit('DELETE_WORD', wordId);
+    },
+    async addTag({ commit }, tagName) {
+      const newTag = {
+        id: uuidv4(),
+        name: tagName
+      };
+      commit('ADD_TAG', newTag);
+      return newTag;
+    },
+    deleteTag({ commit }, tagId) {
+      commit('REMOVE_TAG_FROM_WORDS', tagId);
+      commit('DELETE_TAG', tagId);
+    }
+  },
+
+  getters: {}
+});
+
+// The subscription is still useful for all other data manipulations.
+store.subscribe((mutation, state) => {
+  // We can prevent saving during the import mutation since the action already handles it.
+  if (mutation.type === 'REPLACE_ALL_DATA') {
+    return;
+  }
+  storage.saveData(state);
+});
+
+export default store;
 

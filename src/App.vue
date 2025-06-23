@@ -43,5 +43,8 @@ export default {
 	max-width : 1200px;
 	top-margin : 60px;
 }
+AppHeader{
+	position:relative;
+}
 </style>
 

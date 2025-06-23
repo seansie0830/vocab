@@ -13,6 +13,12 @@
         name: 'QuizPrint',
         component: QuizPrint,
       },
+      {
+          path: '/quiz',
+          name: 'Quiz',
+          component: QuizPrint,
+          meta: { title: '產生考卷' }
+       },   
     ];
 
     const router = createRouter({

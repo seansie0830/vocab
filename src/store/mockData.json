@@ -1,0 +1,54 @@
+{
+  "tags": [
+    { "id": "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "name": "多益高頻" },
+    { "id": "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "name": "生活常用" },
+    { "id": "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "name": "學術英文" },
+    { "id": "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5", "name": "商業書信" },
+    { "id": "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4", "name": "旅遊會話" },
+    { "id": "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3", "name": "科學術語" },
+    { "id": "72929292-9292-9292-9292-729292929292", "name": "IT/電腦" },
+    { "id": "61818181-8181-8181-8181-618181818181", "name": "常用片語" }
+  ],
+  "words": [
+    {
+      "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a1a",
+      "text": "vocabulary",
+      "definition": "詞彙；字彙量",
+      "tags": ["d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"]
+    },
+    {
+      "id": "2b2b2b2b-2b2b-2b2b-2b2b-2b2b2b2b2b2b",
+      "text": "negotiate",
+      "definition": "談判，協商",
+      "tags": ["d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"]
+    },
+    {
+      "id": "3c3c3c3c-3c3c-3c3c-3c3c-3c3c3c3c3c3c",
+      "text": "photosynthesis",
+      "definition": "光合作用",
+      "tags": ["b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3"]
+    },
+    {
+      "id": "4d4d4d4d-4d4d-4d4d-4d4d-4d4d4d4d4d4d",
+      "text": "sustainable",
+      "definition": "永續的；可持續的",
+      "tags": ["c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"]
+    },
+    {
+      "id": "5e5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e",
+      "text": "invoice",
+      "definition": "發票；費用清單",
+      "tags": ["a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"]
+    },
+    { "id": "6f6f6f6f-6f6f-6f6f-6f6f-6f6f6f6f6f6f", "text": "accommodation", "definition": "住宿", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"]},
+    { "id": "7g7g7g7g-7g7g-7g7g-7g7g-7g7g7g7g7g7g", "text": "reservation", "definition": "預約", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4", "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"]},
+    { "id": "8h8h8h8h-8h8h-8h8h-8h8h-8h8h8h8h8h8h", "text": "itinerary", "definition": "行程", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"]},
+    { "id": "9i9i9i9i-9i9i-9i9i-9i9i-9i9i9i9i9i9i", "text": "algorithm", "definition": "演算法", "tags": ["72929292-9292-9292-9292-729292929292", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"]},
+    { "id": "1j1j1j1j-1j1j-1j1j-1j1j-1j1j1j1j1j1j", "text": "database", "definition": "資料庫", "tags": ["72929292-9292-9292-9292-729292929292"]},
+    { "id": "2k2k2k2k-2k2k-2k2k-2k2k-2k2k2k2k2k2k", "text": "variable", "definition": "變數", "tags": ["72929292-9292-9292-9292-729292929292", "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3"]},
+    { "id": "3l3l3l3l-3l3l-3l3l-3l3l-3l3l3l3l3l3l", "text": "hypothesis", "definition": "假設", "tags": ["83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"]},
+    { "id": "4m4m4m4m-4m4m-4m4m-4m4m-4m4m4m4m4m4m", "text": "break a leg", "definition": "祝你好運 (俚語)", "tags": ["61818181-8181-8181-8181-618181818181"]},
+    { "id": "5n5n5n5n-5n5n-5n5n-5n5n-5n5n5n5n5n5n", "text": "bite the bullet", "definition": "硬著頭皮做某事", "tags": ["61818181-8181-8181-8181-618181818181"]},
+    { "id": "6o6o6o6o-6o6o-6o6o-6o6o-6o6o6o6o6o6o", "text": "hit the road", "definition": "上路、出發", "tags": ["61818181-8181-8181-8181-618181818181", "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"]}
+  ]
+}
