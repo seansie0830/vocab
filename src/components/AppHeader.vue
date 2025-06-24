@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <i class="bi bi-card-checklist me-2"></i>
-        單字記憶超人
+        單字記憶工具
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,23 +14,27 @@
             <router-link class="nav-link" active-class="active" to="/">單字列表</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" active-class="active" to="/quiz">產生考卷</router-link>
+            <router-link class="nav-link" active-class="active" to="/quiz-config">產生考卷</router-link>
           </li>
         </ul>
-        <!-- NEW: Add the Import/Export component here -->
-        <ImportExport />
+        <!-- MODIFIED: Replaced the old component with a link to the new settings page -->
+        <ul class="navbar-nav">
+           <li class="nav-item">
+            <router-link class="nav-link" active-class="active" to="/settings">
+              <i class="bi bi-gear-fill"></i><span class="d-lg-none ms-2">設定</span>
+            </router-link>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup>
-// Import the new component
-import ImportExport from './ImportExport.vue';
+// The ImportExport component is no longer needed here, so the import is removed.
 </script>
 
 <style scoped>
-/* Styles for the header component */
 .navbar-brand {
   font-weight: bold;
 }

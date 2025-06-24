@@ -17,12 +17,12 @@
     </main>
 
     <!-- 我們可以預留一個頁尾的位置 -->
-    <footer class="bg-light text-center text-lg-start mt-auto">
+  </div>
+    <footer class="bg-light text-center text-lg-start mt-auto my-3">
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2025 Copyright: 單字記憶工具
       </div>
     </footer>
-  </div>
 </template>
 
 <script>

@@ -1,27 +1,28 @@
-    import { createApp } from 'vue'
-    // 1. 引入 Bootstrap 的 CSS 檔案
-    import 'bootstrap/dist/css/bootstrap.min.css'
-    import 'bootstrap-icons/font/bootstrap-icons.css' 
-    import './style.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'bootstrap'
-    import App from './App.vue'
-    import store from './store'
-    import router from './router'
-    import storage from './services/storage'
+import { createApp } from 'vue'
+import store from './store'
+import router from './router'
+import App from './App.vue'
 
-    if (import.meta.env.DEV) {
-      console.log('Development mode: attaching services to window for debugging.');
-      window.storage = storage;
-      window.store = store;
-    }
+// --- CSS Imports ---
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-    const app = createApp(App)
+// --- FINAL FIX: Explicit JS Import ---
+// As per your request, we are no longer using the 'bundle'.
+// We import the main Bootstrap JavaScript file directly.
+// Modern bundlers like Vite will automatically detect that Bootstrap
+// requires @popperjs/core (which is installed) and handle it correctly.
+// This is the cleanest way to ensure all JS plugins are available.
+import 'bootstrap';
 
-    app.use(store)
-    app.use(router)
+// Custom global styles
+import './style.css'
+
+const app = createApp(App)
+
+app.use(store)
+app.use(router)
+
 store.dispatch('loadState');
-    store.dispatch('initializeApp');
 
-    app.mount('#app')
-    
+app.mount('#app')

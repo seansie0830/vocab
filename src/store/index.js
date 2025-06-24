@@ -5,6 +5,10 @@ import storage from '../services/storage';
 const initialState = {
   words: [],
   tags: [],
+  currentQuiz: {
+    questions: [],
+    config: {}
+  },
 };
 
 const store = createStore({
@@ -17,12 +21,15 @@ const store = createStore({
         state.tags = loadedState.tags || [];
       }
     },
+    SET_CURRENT_QUIZ(state, quizData) {
+        state.currentQuiz = quizData;
+    },
     REPLACE_ALL_DATA(state, newState) {
         state.words = newState.words || [];
         state.tags = newState.tags || [];
     },
     ADD_WORD(state, word) {
-      state.words.push({ ...word, id: uuidv4(), tags: word.tags || [] });
+      state.words.push({ ...word, id: uuidv4(), tags: word.tags || [], unfamiliarity: word.unfamiliarity || 0 });
     },
     UPDATE_WORD(state, updatedWord) {
       const index = state.words.findIndex(w => w.id === updatedWord.id);
@@ -34,7 +41,10 @@ const store = createStore({
       state.words = state.words.filter(w => w.id !== wordId);
     },
     ADD_TAG(state, newTag) {
-      state.tags.push(newTag);
+      const tagToAdd = typeof newTag === 'object' ? newTag : { id: uuidv4(), name: newTag };
+      if (!state.tags.some(t => t.id === tagToAdd.id || t.name === tagToAdd.name)) {
+        state.tags.push(tagToAdd);
+      }
     },
     DELETE_TAG(state, tagId) {
       state.tags = state.tags.filter(t => t.id !== tagId);
@@ -43,6 +53,19 @@ const store = createStore({
       state.words.forEach(word => {
         if (word.tags && word.tags.includes(tagId)) {
           word.tags = word.tags.filter(tId => tId !== tagId);
+        }
+      });
+    },
+    CLEAR_ALL_DATA(state) {
+        state.words = [];
+        state.tags = [];
+    },
+    // --- NEW MUTATION for Quiz Review ---
+    UPDATE_UNFAMILIARITY_SCORES(state, incorrectWordIds) {
+      const incorrectSet = new Set(incorrectWordIds);
+      state.words.forEach(word => {
+        if (incorrectSet.has(word.id)) {
+          word.unfamiliarity = (word.unfamiliarity || 0) + 1;
         }
       });
     }
@@ -61,11 +84,42 @@ const store = createStore({
         });
       }
     },
-    // --- MODIFIED ACTION for Import ---
+    generateQuiz({ commit, state }, config) {
+        let candidateWords = state.words;
+        
+        // Filter by unfamiliarity
+        candidateWords = candidateWords.filter(word => (word.unfamiliarity || 0) >= config.unfamiliarity);
+
+        // Filter by tags
+        if (config.tags && config.tags.length > 0) {
+            const selectedTagSet = new Set(config.tags);
+            candidateWords = candidateWords.filter(word => 
+                word.tags && word.tags.some(tagId => selectedTagSet.has(tagId))
+            );
+        }
+
+        if (candidateWords.length < config.count) {
+            throw new Error(`符合條件的單字只有 ${candidateWords.length} 個，不足以產生 ${config.count} 題的考卷。`);
+        }
+
+        for (let i = candidateWords.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [candidateWords[i], candidateWords[j]] = [candidateWords[j], candidateWords[i]];
+        }
+
+        const questions = candidateWords.slice(0, config.count);
+
+        commit('SET_CURRENT_QUIZ', {
+            questions: questions,
+            config: config
+        });
+    },
+    // --- NEW ACTION for Quiz Review ---
+    updateUnfamiliarityScores({ commit }, incorrectWordIds) {
+      commit('UPDATE_UNFAMILIARITY_SCORES', incorrectWordIds);
+    },
     replaceAllData({ commit, state }, newState) {
       commit('REPLACE_ALL_DATA', newState);
-      // Explicitly save the state to storage after importing,
-      // ensuring the change is persisted immediately.
       storage.saveData(state);
     },
     addWord({ commit }, word) {
@@ -77,26 +131,31 @@ const store = createStore({
     deleteWord({ commit }, wordId) {
       commit('DELETE_WORD', wordId);
     },
-    async addTag({ commit }, tagName) {
-      const newTag = {
-        id: uuidv4(),
-        name: tagName
-      };
+    addTag({ commit }, tagData) {
+      const newTag = typeof tagData === 'object' ? tagData : { id: uuidv4(), name: tagData };
       commit('ADD_TAG', newTag);
       return newTag;
     },
     deleteTag({ commit }, tagId) {
       commit('REMOVE_TAG_FROM_WORDS', tagId);
       commit('DELETE_TAG', tagId);
+    },
+    clearAllData({ commit }) {
+      commit('CLEAR_ALL_DATA');
+    },
+    restoreDefaults({ commit }) {
+      commit('CLEAR_ALL_DATA');
+      import('./mockData.json').then(mockData => {
+        console.log('DEV MODE: Restoring default mock data.');
+        commit('SET_STATE', mockData.default);
+      });
     }
   },
 
   getters: {}
 });
 
-// The subscription is still useful for all other data manipulations.
 store.subscribe((mutation, state) => {
-  // We can prevent saving during the import mutation since the action already handles it.
   if (mutation.type === 'REPLACE_ALL_DATA') {
     return;
   }
@@ -104,4 +163,3 @@ store.subscribe((mutation, state) => {
 });
 
 export default store;
-

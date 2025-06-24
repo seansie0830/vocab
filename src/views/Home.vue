@@ -7,13 +7,23 @@
       </button>
     </div>
 
+    <!-- Use the WordSearch component with v-model -->
     <WordSearch v-model="searchQuery" class="mb-4" />
 
 
+    <!-- Words List -->
     <div v-if="filteredWords.length > 0" class="list-group">
       <div v-for="word in filteredWords" :key="word.id" class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
         <div class="word-details">
-          <h5 class="mb-1">{{ word.text }}</h5>
+          <!-- MODIFIED: Added a wrapper for the title and the new badge -->
+          <div class="d-flex align-items-center mb-1">
+            <h5 class="mb-0 me-3">{{ word.text }}</h5>
+            <span 
+                class="badge rounded-pill fw-normal ms-auto"
+              :class="getUnfamiliarityInfo(word.unfamiliarity).cssClass">
+                {{ getUnfamiliarityInfo(word.unfamiliarity).text }}
+            </span>
+          </div>
           <p class="mb-1 text-secondary">{{ word.definition }}</p>
           <div v-if="word.tags && word.tags.length > 0" class="mt-2">
             <span v-for="tag in getDisplayTags(word.tags)" :key="tag.id || 'more-tags-indicator'" 
@@ -38,6 +48,7 @@
       <p class="mb-0" v-else>目前沒有任何單字，點擊「新增單字」來加入你的第一個單字吧！</p>
     </div>
 
+    <!-- Word Editor Modal -->
     <WordEditorModal 
       v-if="showModal"
       :show="showModal" 
@@ -74,8 +85,18 @@ const filteredWords = computed(() => {
   );
 });
 
-// The handleSearch function is no longer needed because of v-model
-// const handleSearch = (newQuery) => { ... };
+// --- NEW: Helper for Unfamiliarity Badge ---
+const getUnfamiliarityInfo = (unfamiliarityScore) => {
+  const score = unfamiliarityScore || 0; // Default to 0 if undefined
+  
+  if (score === 0) {
+    return { cssClass: 'unfamiliarity-0', text: '已熟悉' };
+  }
+  if (score <= 3) {
+    return { cssClass: 'unfamiliarity-low', text: `陌生度 ${score}` };
+  }
+  return { cssClass: 'unfamiliarity-high', text: `陌生度 ${score}` };
+};
 
 const openModalForNew = () => {
   editingWord.value = null;
@@ -165,11 +186,16 @@ const getDisplayTags = (tagIds) => {
     }
 }
 
+/* --- Tag Colors --- */
 .badge.tag-color-1 { background-color: #0d6efd; color: white; }
 .badge.tag-color-2 { background-color: #198754; color: white; }
 .badge.tag-color-3 { background-color: #6f42c1; color: white; }
 .badge.tag-color-4 { background-color: #dc3545; color: white; }
 .badge.tag-color-5 { background-color: #fd7e14; color: white; }
 .badge.tag-color-6 { background-color: #6c757d; color: white; }
-</style>
 
+/* --- NEW: Unfamiliarity Badge Colors --- */
+.badge.unfamiliarity-0 { background-color:rgb(217, 255, 236); color:rgb(73, 87, 75); border: 1px solid #dee2e6;}
+.badge.unfamiliarity-low { background-color: #fff3cd; color: #664d03; border: 1px solid #ffecb5;}
+.badge.unfamiliarity-high { background-color: #f8d7da; color: #842029; border: 1px solid #f5c2c7;}
+</style>
