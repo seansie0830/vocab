@@ -1,59 +1,2461 @@
 {
   "tags": [
-    { "id": "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "name": "多益高頻" },
-    { "id": "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "name": "生活常用" },
-    { "id": "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "name": "學術英文" },
-    { "id": "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5", "name": "商業書信" },
-    { "id": "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4", "name": "旅遊會話" },
-    { "id": "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3", "name": "科學術語" },
-    { "id": "72929292-9292-9292-9292-729292929292", "name": "IT/電腦" },
-    { "id": "61818181-8181-8181-8181-618181818181", "name": "常用片語" }
+    {
+      "id": "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+      "name": "多益高頻"
+    },
+    {
+      "id": "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+      "name": "生活常用"
+    },
+    {
+      "id": "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+      "name": "學術英文"
+    },
+    {
+      "id": "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+      "name": "商業書信"
+    },
+    {
+      "id": "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4",
+      "name": "旅遊會話"
+    },
+    {
+      "id": "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3",
+      "name": "科學術語"
+    },
+    {
+      "id": "72929292-9292-9292-9292-729292929292",
+      "name": "IT/電腦"
+    },
+    {
+      "id": "61818181-8181-8181-8181-618181818181",
+      "name": "常用片語"
+    }
   ],
   "words": [
     {
       "id": "1a1a1a1a-1a1a-1a1a-1a1a-1a1a1a1a1a1a",
       "text": "vocabulary",
       "definition": "詞彙；字彙量",
-      "tags": ["d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"],
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
       "unfamiliarity": 5
     },
     {
       "id": "2b2b2b2b-2b2b-2b2b-2b2b-2b2b2b2b2b2b",
       "text": "negotiate",
       "definition": "談判，協商",
-      "tags": ["d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8", "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"],
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
       "unfamiliarity": 4
     },
     {
       "id": "3c3c3c3c-3c3c-3c3c-3c3c-3c3c3c3c3c3c",
       "text": "photosynthesis",
       "definition": "光合作用",
-      "tags": ["b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3"],
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3"
+      ],
       "unfamiliarity": 3
     },
     {
       "id": "4d4d4d4d-4d4d-4d4d-4d4d-4d4d4d4d4d4d",
       "text": "sustainable",
       "definition": "永續的；可持續的",
-      "tags": ["c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6", "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"],
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
       "unfamiliarity": 2
     },
     {
       "id": "5e5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e",
       "text": "invoice",
       "definition": "發票；費用清單",
-      "tags": ["a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"],
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
       "unfamiliarity": 1
     },
-    { "id": "6f6f6f6f-6f6f-6f6f-6f6f-6f6f6f6f6f6f", "text": "accommodation", "definition": "住宿", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"], "unfamiliarity": 0},
-    { "id": "7g7g7g7g-7g7g-7g7g-7g7g-7g7g7g7g7g7g", "text": "reservation", "definition": "預約", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4", "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"], "unfamiliarity": 0},
-    { "id": "8h8h8h8h-8h8h-8h8h-8h8h-8h8h8h8h8h8h", "text": "itinerary", "definition": "行程", "tags": ["94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"], "unfamiliarity": 0},
-    { "id": "9i9i9i9i-9i9i-9i9i-9i9i-9i9i9i9i9i9i", "text": "algorithm", "definition": "演算法", "tags": ["72929292-9292-9292-9292-729292929292", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"], "unfamiliarity": 0},
-    { "id": "1j1j1j1j-1j1j-1j1j-1j1j-1j1j1j1j1j1j", "text": "database", "definition": "資料庫", "tags": ["72929292-9292-9292-9292-729292929292"], "unfamiliarity": 0},
-    { "id": "2k2k2k2k-2k2k-2k2k-2k2k-2k2k2k2k2k2k", "text": "variable", "definition": "變數", "tags": ["72929292-9292-9292-9292-729292929292", "83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3"], "unfamiliarity": 0},
-    { "id": "3l3l3l3l-3l3l-3l3l-3l3l-3l3l3l3l3l3l", "text": "hypothesis", "definition": "假設", "tags": ["83a3a3a3-a3a3-a3a3-a3a3-83a3a3a3a3a3", "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"], "unfamiliarity": 0},
-    { "id": "4m4m4m4m-4m4m-4m4m-4m4m-4m4m4m4m4m4m", "text": "break a leg", "definition": "祝你好運 (俚語)", "tags": ["61818181-8181-8181-8181-618181818181"], "unfamiliarity": 0},
-    { "id": "5n5n5n5n-5n5n-5n5n-5n5n-5n5n5n5n5n5n", "text": "bite the bullet", "definition": "硬著頭皮做某事", "tags": ["61818181-8181-8181-8181-618181818181"], "unfamiliarity": 0},
-    { "id": "6o6o6o6o-6o6o-6o6o-6o6o-6o6o6o6o6o6o", "text": "hit the road", "definition": "上路、出發", "tags": ["61818181-8181-8181-8181-618181818181", "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"], "unfamiliarity": 0}
+    {
+      "id": "6f6f6f6f-6f6f-6f6f-6f6f-6f6f6f6f6f6f",
+      "text": "accommodation",
+      "definition": "住宿",
+      "tags": [
+        "94b4b4b4-b4b4-b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "7g7g7g7g-7g7g-7g7g-7g7g-7g7g7g7g7g7g",
+      "text": "reservation",
+      "definition": "預約",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "8h8h8h8h-8h8h-8h8h-8h8h-8h8h8h8h8h8h",
+      "text": "itinerary",
+      "definition": "行程",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9i9i9i9i-9i9i-9i9i-9i9i-9i9i9i9i9i9i",
+      "text": "algorithm",
+      "definition": "演算法",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "1j1j1j1j-1j1j-1j1j-1j1j-1j1j1j1j1j1j",
+      "text": "database",
+      "definition": "資料庫",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2k2k2k2k-2k2k-2k2k-2k2k-2k2k2k2k2k2k",
+      "text": "variable",
+      "definition": "變數",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3l3l3l3l-3l3l-3l3l-3l3l-3l3l3l3l3l3l",
+      "text": "hypothesis",
+      "definition": "假設",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "4m4m4m4m-4m4m-4m4m-4m4m-4m4m4m4m4m4m",
+      "text": "break a leg",
+      "definition": "祝你好運 (俚語)",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "5n5n5n5n-5n5n-5n5n-5n5n-5n5n5n5n5n5n",
+      "text": "bite the bullet",
+      "definition": "硬著頭皮做某事",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6o6o6o6o-6o6o-6o6o-6o6o-6o6o6o6o6o6o",
+      "text": "hit the road",
+      "definition": "上路、出發",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "7p7p7p7p-7p7p-7p7p-7p7p-7p7p7p7p7p7p",
+      "text": "entrepreneur",
+      "definition": "企業家",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8q8q8q8q-8q8q-8q8q-8q8q-8q8q8q8q8q8q",
+      "text": "acquisition",
+      "definition": "收購；獲得",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9r9r9r9r-9r9r-9r9r-9r9r-9r9r9r9r9r9r",
+      "text": "fluctuate",
+      "definition": "波動，起伏",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "0s0s0s0s-0s0s-0s0s-0s0s-0s0s0s0s0s0s",
+      "text": "incentive",
+      "definition": "激勵，誘因",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1t1t1t1t-1t1t-1t1t-1t1t-1t1t1t1t1t1t",
+      "text": "liability",
+      "definition": "責任；負債",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2u2u2u2u-2u2u-2u2u-2u2u-2u2u2u2u2u2u",
+      "text": "discrepancy",
+      "definition": "差異，不符",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3v3v3v3v-3v3v-3v3v-3v3v-3v3v3v3v3v3v",
+      "text": "redundant",
+      "definition": "多餘的；累贅的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4w4w4w4w-4w4w-4w4w-4w4w-4w4w4w4w4w4w",
+      "text": "expedite",
+      "definition": "加速，促進",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5x5x5x5x-5x5x-5x5x-5x5x-5x5x5x5x5x5x",
+      "text": "allocate",
+      "definition": "分配；撥款",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6y6y6y6y-6y6y-6y6y-6y6y-6y6y6y6y6y6y",
+      "text": "complementary",
+      "definition": "互補的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7z7z7z7z-7z7z-7z7z-7z7z-7z7z7z7z7z7z",
+      "text": "diligent",
+      "definition": "勤奮的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8a8a8a8a-8a8a-8a8a-8a8a-8a8a8a8a8a8a",
+      "text": "feasible",
+      "definition": "可行的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9b9b9b9b-9b9b-9b9b-9b9b-9b9b9b9b9b9b",
+      "text": "implement",
+      "definition": "實施，執行",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1c1c1c1c-1c1c-1c1c-1c1c-1c1c1c1c1c1c",
+      "text": "meticulous",
+      "definition": "一絲不苟的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2d2d2d2d-2d2d-2d2d-2d2d-2d2d2d2d2d2d",
+      "text": "pertinent",
+      "definition": "相關的，恰當的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3e3e3e3e-3e3e-3e3e-3e3e-3e3e3e3e3e3e",
+      "text": "proficient",
+      "definition": "精通的，熟練的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4f4f4f4f-4f4f-4f4f-4f4f-4f4f4f4f4f4f",
+      "text": "subsequent",
+      "definition": "隨後的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5g5g5g5g-5g5g-5g5g-5g5g-5g5g5g5g5g5g",
+      "text": "tangible",
+      "definition": "有形的，實體的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6h6h6h6h-6h6h-6h6h-6h6h-6h6h6h6h6h6h",
+      "text": "validate",
+      "definition": "驗證，確認",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7i7i7i7i-7i7i-7i7i-7i7i-7i7i7i7i7i7i",
+      "text": "versatile",
+      "definition": "多才多藝的；多功能的",
+      "tags": [
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8j8j8j8j-8j8j-8j8j-8j8j-8j8j8j8j8j8j",
+      "text": "consensus",
+      "definition": "共識",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9k9k9k9k-9k9k-9k9k-9k9k-9k9k9k9k9k9k",
+      "text": "paradigm",
+      "definition": "範例，典範",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1l1l1l1l-1l1l-1l1l-1l1l-1l1l1l1l1l1l",
+      "text": "empirical",
+      "definition": "實證的；經驗的",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2m2m2m2m-2m2m-2m2m-2m2m-2m2m2m2m2m2m",
+      "text": "mitigate",
+      "definition": "減輕，緩和",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3n3n3n3n-3n3n-3n3n-3n3n-3n3n3n3n3n3n",
+      "text": "correlation",
+      "definition": "相關性",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4o4o4o4o-4o4o-4o4o-4o4o-4o4o4o4o4o4o",
+      "text": "differentiate",
+      "definition": "區分，辨別",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5p5p5p5p-5p5p-5p5p-5p5p-5p5p5p5p5p5p",
+      "text": "ameliorate",
+      "definition": "改善，改良",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6q6q6q6q-6q6q-6q6q-6q6q-6q6q6q6q6q6q",
+      "text": "ubiquitous",
+      "definition": "無處不在的",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7r7r7r7r-7r7r-7r7r-7r7r-7r7r7r7r7r7r",
+      "text": "ephemeral",
+      "definition": "短暫的",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8s8s8s8s-8s8s-8s8s-8s8s-8s8s8s8s8s8s",
+      "text": "cognition",
+      "definition": "認知",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9t9t9t9t-9t9t-9t9t-9t9t-9t9t9t9t9t9t",
+      "text": "implication",
+      "definition": "含義；暗示",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1u1u1u1u-1u1u-1u1u-1u1u-1u1u1u1u1u1u",
+      "text": "paradox",
+      "definition": "悖論",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2v2v2v2v-2v2v-2v2v-2v2v-2v2v2v2v2v2v",
+      "text": "scrutinize",
+      "definition": "仔細檢查",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3w3w3w3w-3w3w-3w3w-3w3w-3w3w3w3w3w3w",
+      "text": "synergy",
+      "definition": "協同作用",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4x4x4x4x-4x4x-4x4x-4x4x-4x4x4x4x4x4x",
+      "text": "arbitrary",
+      "definition": "任意的，武斷的",
+      "tags": [
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5y5y5y5y-5y5y-5y5y-5y5y-5y5y5y5y5y5y",
+      "text": "benevolent",
+      "definition": "仁慈的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6z6z6z6z-6z6z-6z6z-6z6z-6z6z6z6z6z6z",
+      "text": "capricious",
+      "definition": "反覆無常的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7a7a7a7a-7a7a-7a7a-7a7a-7a7a7a7a7a7a",
+      "text": "deleterious",
+      "definition": "有害的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8b8b8b8b-8b8b-8b8b-8b8b-8b8b8b8b8b8b",
+      "text": "elucidate",
+      "definition": "闡明，解釋",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9c9c9c9c-9c9c-9c9c-9c9c-9c9c9c9c9c9c",
+      "text": "fortuitous",
+      "definition": "偶然的，意想不到的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1d1d1d1d-1d1d-1d1d-1d1d-1d1d1d1d1d1d",
+      "text": "gregarious",
+      "definition": "好社交的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2e2e2e2e-2e2e-2e2e-2e2e-2e2e2e2e2e2e",
+      "text": "haughty",
+      "definition": "傲慢的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3f3f3f3f-3f3f-3f3f-3f3f-3f3f3f3f3f3f",
+      "text": "impecunious",
+      "definition": "貧窮的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4g4g4g4g-4g4g-4g4g-4g4g-4g4g4g4g4g4g",
+      "text": "juxtapose",
+      "definition": "並置",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5h5h5h5h-5h5h-5h5h-5h5h-5h5h5h5h5h5h",
+      "text": "loquacious",
+      "definition": "多話的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6i6i6i6i-6i6i-6i6i-6i6i-6i6i6i6i6i6i",
+      "text": "magnanimous",
+      "definition": "寬宏大量的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7j7j7j7j-7j7j-7j7j-7j7j-7j7j7j7j7j7j",
+      "text": "nefarious",
+      "definition": "邪惡的，不法的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8k8k8k8k-8k8k-8k8k-8k8k-8k8k8k8k8k8k",
+      "text": "obfuscate",
+      "definition": "使模糊，使困惑",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9l9l9l9l-9l9l-9l9l-9l9l-9l9l9l9l9l9l",
+      "text": "perfunctory",
+      "definition": "敷衍了事的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1m1m1m1m-1m1m-1m1m-1m1m-1m1m1m1m1m1m",
+      "text": "quiescent",
+      "definition": "靜止的，不活動的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2n2n2n2n-2n2n-2n2n-2n2n-2n2n2n2n2n2n",
+      "text": "recalcitrant",
+      "definition": "不服從的，頑抗的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3o3o3o3o-3o3o-3o3o-3o3o-3o3o3o3o3o3o",
+      "text": "sanguine",
+      "definition": "樂觀的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4p4p4p4p-4p4p-4p4p-4p4p-4p4p4p4p4p4p",
+      "text": "taciturn",
+      "definition": "沉默寡言的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5q5q5q5q-5q5q-5q5q-5q5q-5q5q5q5q5q5q",
+      "text": "unilateral",
+      "definition": "單方面的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6r6r6r6r-6r6r-6r6r-6r6r-6r6r6r6r6r6r",
+      "text": "venerate",
+      "definition": "尊敬",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7s7s7s7s-7s7s-7s7s-7s7s-7s7s7s7s7s7s",
+      "text": "whimsical",
+      "definition": "異想天開的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8t8t8t8t-8t8t-8t8t-8t8t-8t8t8t8t8t8t",
+      "text": "xenophobia",
+      "definition": "仇外",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9u9u9u9u-9u9u-9u9u-9u9u-9u9u9u9u9u9u",
+      "text": "yield",
+      "definition": "產生；屈服",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7",
+        "d8f8f8f8-f8f8-f8f8-f8f8-d8f8f8f8f8f8"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1v1v1v1v-1v1v-1v1v-1v1v-1v1v1v1v1v1v",
+      "text": "zealous",
+      "definition": "熱心的",
+      "tags": [
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2w2w2w2w-2w2w-2w2w-2w2w-2w2w2w2w2w2w",
+      "text": "acumen",
+      "definition": "敏銳；精明",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3x3x3x3x-3x3x-3x3x-3x3x-3x3x3x3x3x3x",
+      "text": "brevity",
+      "definition": "簡潔",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4y4y4y4y-4y4y-4y4y-4y4y-4y4y4y4y4y4y",
+      "text": "concur",
+      "definition": "同意；同時發生",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5z5z5z5z-5z5z-5z5z-5z5z-5z5z5z5z5z5z",
+      "text": "debilitate",
+      "definition": "使虛弱",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6a6a6a6a-6a6a-6a6a-6a6a-6a6a6a6a6a6a",
+      "text": "equivocate",
+      "definition": "含糊其辭",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7b7b7b7b-7b7b-7b7b-7b7b-7b7b7b7b7b7b",
+      "text": "foment",
+      "definition": "煽動",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8c8c8c8c-8c8c-8c8c-8c8c-8c8c8c8c8c8c",
+      "text": "germane",
+      "definition": "有關的，恰當的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9d9d9d9d-9d9d-9d9d-9d9d-9d9d9d9d9d9d",
+      "text": "haphazard",
+      "definition": "隨意的，雜亂無章的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1e1e1e1e-1e1e-1e1e-1e1e-1e1e1e1e1e1e",
+      "text": "indigenous",
+      "definition": "本地的，固有的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2f2f2f2f-2f2f-2f2f-2f2f-2f2f2f2f2f2f",
+      "text": "juxtaposition",
+      "definition": "並置，並列",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3g3g3g3g-3g3g-3g3g-3g3g-3g3g3g3g3g3g",
+      "text": "lackadaisical",
+      "definition": "懶散的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4h4h4h4h-4h4h-4h4h-4h4h-4h4h4h4h4h4h",
+      "text": "malevolent",
+      "definition": "惡意的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5i5i5i5i-5i5i-5i5i-5i5i-5i5i5i5i5i5i",
+      "text": "nonchalant",
+      "definition": "漫不經心的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6j6j6j6j-6j6j-6j6j-6j6j-6j6j6j6j6j6j",
+      "text": "ostracize",
+      "definition": "排斥，放逐",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7k7k7k7k-7k7k-7k7k-7k7k-7k7k7k7k7k7k",
+      "text": "plethora",
+      "definition": "過多，過剩",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8l8l8l8l-8l8l-8l8l-8l8l-8l8l8l8l8l8l",
+      "text": "quandary",
+      "definition": "困境，窘境",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9m9m9m9m-9m9m-9m9m-9m9m-9m9m9m9m9m9m",
+      "text": "reprove",
+      "definition": "責備，訓斥",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1n1n1n1n-1n1n-1n1n-1n1n-1n1n1n1n1n1n",
+      "text": "surreptitious",
+      "definition": "秘密的，偷偷摸摸的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2o2o2o2o-2o2o-2o2o-2o2o-2o2o2o2o2o2o",
+      "text": "transient",
+      "definition": "短暫的，一時的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3p3p3p3p-3p3p-3p3p-3p3p-3p3p3p3p3p3p",
+      "text": "unfathomable",
+      "definition": "深不可測的；難以理解的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4q4q4q4q-4q4q-4q4q-4q4q-4q4q4q4q4q4q",
+      "text": "viable",
+      "definition": "可行的；能存活的",
+      "tags": [
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5r5r5r5r-5r5r-5r5r-5r5r-5r5r5r5r5r5r",
+      "text": "ubiquitous",
+      "definition": "無處不在的",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6s6s6s6s-6s6s-6s6s-6s6s-6s6s6s6s6s6s",
+      "text": "paradigm",
+      "definition": "範例，典範",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7t7t7t7t-7t7t-7t7t-7t7t-7t7t7t7t7t7t",
+      "text": "cryptography",
+      "definition": "密碼學",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8u8u8u8u-8u8u-8u8u-8u8u-8u8u8u8u8u8u",
+      "text": "debug",
+      "definition": "除錯",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9v9v9v9v-9v9v-9v9v-9v9v-9v9v9v9v9v9v",
+      "text": "framework",
+      "definition": "框架",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1w1w1w1w-1w1w-1w1w-1w1w-1w1w1w1w1w1w",
+      "text": "interface",
+      "definition": "介面",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2x2x2x2x-2x2x-2x2x-2x2x-2x2x2x2x2x2x",
+      "text": "compile",
+      "definition": "編譯",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3y3y3y3y-3y3y-3y3y-3y3y-3y3y3y3y3y3y",
+      "text": "query",
+      "definition": "查詢",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4z4z4z4z-4z4z-4z4z-4z4z-4z4z4z4z4z4z",
+      "text": "bandwidth",
+      "definition": "頻寬",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5a5a5a5a-5a5a-5a5a-5a5a-5a5a5a5a5a5a",
+      "text": "protocol",
+      "definition": "協定",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6b6b6b6b-6b6b-6b6b-6b6b-6b6b6b6b6b6b",
+      "text": "malware",
+      "definition": "惡意軟體",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7c7c7c7c-7c7c-7c7c-7c7c-7c7c7c7c7c7c",
+      "text": "firewall",
+      "definition": "防火牆",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8d8d8d8d-8d8d-8d8d-8d8d-8d8d8d8d8d8d",
+      "text": "authentication",
+      "definition": "身份驗證",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9e9e9e9e-9e9e-9e9e-9e9e-9e9e9e9e9e9e",
+      "text": "virtualization",
+      "definition": "虛擬化",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1f1f1f1f-1f1f-1f1f-1f1f-1f1f1f1f1f1f",
+      "text": "cloud computing",
+      "definition": "雲端運算",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2g2g2g2g-2g2g-2g2g-2g2g-2g2g2g2g2g2g",
+      "text": "blockchain",
+      "definition": "區塊鏈",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3h3h3h3h-3h3h-3h3h-3h3h-3h3h3h3h3h3h",
+      "text": "artificial intelligence",
+      "definition": "人工智慧",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4i4i4i4i-4i4i-4i4i-4i4i-4i4i4i4i4i4i",
+      "text": "machine learning",
+      "definition": "機器學習",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5j5j5j5j-5j5j-5j5j-5j5j-5j5j5j5j5j5j",
+      "text": "cybersecurity",
+      "definition": "網路安全",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6k6k6k6k-6k6k-6k6k-6k6k-6k6k6k6k6k6k",
+      "text": "data mining",
+      "definition": "資料探勘",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7l7l7l7l-7l7l-7l7l-7l7l-7l7l7l7l7l7l",
+      "text": "neural network",
+      "definition": "神經網路",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8m8m8m8m-8m8m-8m8m-8m8m-8m8m8m8m8m8m",
+      "text": "virtual reality",
+      "definition": "虛擬實境",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9n9n9n9n-9n9n-9n9n-9n9n-9n9n9n9n9n9n",
+      "text": "augmented reality",
+      "definition": "擴增實境",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1o1o1o1o-1o1o-1o1o-1o1o-1o1o1o1o1o1o",
+      "text": "internet of things",
+      "definition": "物聯網",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2p2p2p2p-2p2p-2p2p-2p2p-2p2p2p2p2p2p",
+      "text": "big data",
+      "definition": "大數據",
+      "tags": [
+        "72929292-9292-9292-9292-729292929292",
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3q3q3q3q-3q3q-3q3q-3q3q-3q3q3q3q3q3q",
+      "text": "algorithm",
+      "definition": "演算法",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4r4r4r4r-4r4r-4r4r-4r4r-4r4r4r4r4r4r",
+      "text": "hypothesis",
+      "definition": "假設",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5s5s5s5s-5s5s-5s5s-5s5s-5s5s5s5s5s5s",
+      "text": "experiment",
+      "definition": "實驗",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6t6t6t6t-6t6t-6t6t-6t6t-6t6t6t6t6t6t",
+      "text": "theory",
+      "definition": "理論",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7u7u7u7u-7u7u-7u7u-7u7u-7u7u7u7u7u7u",
+      "text": "analysis",
+      "definition": "分析",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8v8v8v8v-8v8v-8v8v-8v8v-8v8v8v8v8v8v",
+      "text": "observation",
+      "definition": "觀察",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9w9w9w9w-9w9w-9w9w-9w9w-9w9w9w9w9w9w",
+      "text": "conclusion",
+      "definition": "結論",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1x1x1x1x-1x1x-1x1x-1x1x-1x1x1x1x1x1x",
+      "text": "data",
+      "definition": "數據",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2y2y2y2y-2y2y-2y2y-2y2y-2y2y2y2y2y2y",
+      "text": "variable",
+      "definition": "變數",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3z3z3z3z-3z3z-3z3z-3z3z-3z3z3z3z3z3z",
+      "text": "constant",
+      "definition": "常數",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4a4a4a4a-4a4a-4a4a-4a4a-4a4a4a4a4a4a",
+      "text": "equation",
+      "definition": "方程式",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5b5b5b5b-5b5b-5b5b-5b5b-5b5b5b5b5b5b",
+      "text": "molecule",
+      "definition": "分子",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6c6c6c6c-6c6c-6c6c-6c6c-6c6c6c6c6c6c",
+      "text": "atom",
+      "definition": "原子",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7d7d7d7d-7d7d-7d7d-7d7d-7d7d7d7d7d7d",
+      "text": "photosynthesis",
+      "definition": "光合作用",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8e8e8e8e-8e8e-8e8e-8e8e-8e8e8e8e8e8e",
+      "text": "ecosystem",
+      "definition": "生態系統",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9f9f9f9f-9f9f-9f9f-9f9f-9f9f9f9f9f9f",
+      "text": "evolution",
+      "definition": "演化",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1g1g1g1g-1g1g-1g1g-1g1g-1g1g1g1g1g1g",
+      "text": "celestial",
+      "definition": "天體的",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2h2h2h2h-2h2h-2h2h-2h2h-2h2h2h2h2h2h",
+      "text": "gravity",
+      "definition": "重力",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3i3i3i3i-3i3i-3i3i-3i3i-3i3i3i3i3i3i",
+      "text": "quantum",
+      "definition": "量子",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4j4j4j4j-4j4j-4j4j-4j4j-4j4j4j4j4j4j",
+      "text": "radiation",
+      "definition": "輻射",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5k5k5k5k-5k5k-5k5k-5k5k-5k5k5k5k5k5k",
+      "text": "mutation",
+      "definition": "突變",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6l6l6l6l-6l6l-6l6l-6l6l-6l6l6l6l6l6l",
+      "text": "neuron",
+      "definition": "神經元",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7m7m7m7m-7m7m-7m7m-7m7m-7m7m7m7m7m7m",
+      "text": "chromosome",
+      "definition": "染色體",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8n8n8n8n-8n8n-8n8n-8n8n-8n8n8n8n8n8n",
+      "text": "genetics",
+      "definition": "遺傳學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9o9o9o9o-9o9o-9o9o-9o9o-9o9o9o9o9o9o",
+      "text": "pathogen",
+      "definition": "病原體",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1p1p1p1p-1p1p-1p1p-1p1p-1p1p1p1p1p1p",
+      "text": "pandemic",
+      "definition": "大流行病",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2q2q2q2q-2q2q-2q2q-2q2q-2q2q2q2q2q2q",
+      "text": "vaccine",
+      "definition": "疫苗",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3r3r3r3r-3r3r-3r3r-3r3r-3r3r3r3r3r3r",
+      "text": "sedimentary",
+      "definition": "沉積的",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4s4s4s4s-4s4s-4s4s-4s4s-4s4s4s4s4s4s",
+      "text": "igneous",
+      "definition": "火成岩的",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5t5t5t5t-5t5t-5t5t-5t5t-5t5t5t5t5t5t",
+      "text": "metamorphic",
+      "definition": "變質岩的",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6u6u6u6u-6u6u-6u6u-6u6u-6u6u6u6u6u6u",
+      "text": "fossil",
+      "definition": "化石",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7v7v7v7v-7v7v-7v7v-7v7v-7v7v7v7v7v7v",
+      "text": "continental drift",
+      "definition": "大陸漂移",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8w8w8w4w-8w8w-8w8w-8w8w-8w8w8w8w8w8w",
+      "text": "tectonic plates",
+      "definition": "板塊構造",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9x9x9x9x-9x9x-9x9x-9x9x-9x9x9x9x9x9x",
+      "text": "volcano",
+      "definition": "火山",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1y1y1y1y-1y1y-1y1y-1y1y-1y1y1y1y1y1y",
+      "text": "earthquake",
+      "definition": "地震",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2z2z2z2z-2z2z-2z2z-2z2z-2z2z2z2z2z2z",
+      "text": "tsunami",
+      "definition": "海嘯",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3a3a3a3a-3a3a-3a3a-3a3a-3a3a3a3a3a3a",
+      "text": "meteorology",
+      "definition": "氣象學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4b4b4b4b-4b4b-4b4b-4b4b-4b4b4b4b4b4b",
+      "text": "atmosphere",
+      "definition": "大氣層",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5c5c5c5c-5c5c-5c5c-5c5c-5c5c5c5c5c5c",
+      "text": "climate change",
+      "definition": "氣候變遷",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6d6d6d6d-6d6d-6d6d-6d6d-6d6d6d6d6d6d",
+      "text": "greenhouse effect",
+      "definition": "溫室效應",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7e7e7e7e-7e7e-7e7e-7e7e-7e7e7e7e7e7e",
+      "text": "ozone layer",
+      "definition": "臭氧層",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8f8f8f8f-8f8f-8f8f-8f8f-8f8f8f8f8f8f",
+      "text": "biotechnology",
+      "definition": "生物科技",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9g9g9g9g-9g9g-9g9g-9g9g-9g9g9g9g9g9g",
+      "text": "nanotechnology",
+      "definition": "奈米科技",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1h1h1h1h-1h1h-1h1h-1h1h-1h1h1h1h1h1h",
+      "text": "robotics",
+      "definition": "機器人學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3",
+        "72929292-9292-9292-9292-729292929292"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2i2i2i2i-2i2i-2i2i-2i2i-2i2i2i2i2i2i",
+      "text": "astronomy",
+      "definition": "天文學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3j3j3j3j-3j3j-3j3j-3j3j-3j3j3j3j3j3j",
+      "text": "cosmology",
+      "definition": "宇宙學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4k4k4k4k-4k4k-4k4k-4k4k-4k4k4k4k4k4k",
+      "text": "black hole",
+      "definition": "黑洞",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5l5l5l5l-5l5l-5l5l-5l5l-5l5l5l5l5l5l",
+      "text": "supernova",
+      "definition": "超新星",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6m6m6m6m-6m6m-6m6m-6m6m-6m6m6m6m6m6m",
+      "text": "exoplanet",
+      "definition": "系外行星",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7n7n7n7n-7n7n-7n7n-7n7n-7n7n7n7n7n7n",
+      "text": "paleontology",
+      "definition": "古生物學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8o8o8o8o-8o8o-8o8o-8o8o-8o8o8o8o8o8o",
+      "text": "archaeology",
+      "definition": "考古學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9p9p9p9p-9p9p-9p9p-9p9p-9p9p9p9p9p9p",
+      "text": "anthropology",
+      "definition": "人類學",
+      "tags": [
+        "83a3a3a3-a3a3-83a3a3a3-a3a3-83a3a3a3a3a3"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1q1q1q1q-1q1q-1q1q-1q1q-1q1q1q1q1q1q",
+      "text": "sociology",
+      "definition": "社會學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2r2r2r2r-2r2r-2r2r-2r2r-2r2r2r2r2r2r",
+      "text": "psychology",
+      "definition": "心理學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3s3s3s3s-3s3s-3s3s-3s3s-3s3s3s3s3s3s",
+      "text": "economics",
+      "definition": "經濟學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4t4t4t4t-4t4t-4t4t-4t4t-4t4t4t4t4t4t",
+      "text": "philosophy",
+      "definition": "哲學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5u5u5u5u-5u5u-5u5u-5u5u-5u5u5u5u5u5u",
+      "text": "literature",
+      "definition": "文學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6v6v6v6v-6v6v-6v6v-6v6v-6v6v6v6v6v6v",
+      "text": "pedagogy",
+      "definition": "教育學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7w7w7w7w-7w7w-7w7w-7w7w-7w7w7w7w7w7w",
+      "text": "epistemology",
+      "definition": "知識論",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8x8x8x8x-8x8x-8x8x-8x8x-8x8x8x8x8x8x",
+      "text": "ontology",
+      "definition": "本體論",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9y9y9y9y-9y9y-9y9y-9y9y-9y9y9y9y9y9y",
+      "text": "aesthetics",
+      "definition": "美學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1z1z1z1z-1z1z-1z1z-1z1z-1z1z1z1z1z1z",
+      "text": "ethics",
+      "definition": "倫理學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2a2a2a2a-2a2a-2a2a-2a2a-2a2a2a2a2a2a",
+      "text": "logic",
+      "definition": "邏輯",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3b3b3b3b-3b3b-3b3b-3b3b-3b3b3b3b3b3b",
+      "text": "rhetoric",
+      "definition": "修辭學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4c4c4c4c-4c4c-4c4c-4c4c-4c4c4c4c4c4c",
+      "text": "semantics",
+      "definition": "語義學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5d5d5d5d-5d5d-5d5d-5d5d-5d5d5d5d5d5d",
+      "text": "syntax",
+      "definition": "句法學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6e6e6e6e-6e6e-6e6e-6e6e-6e6e6e6e6e6e",
+      "text": "phonetics",
+      "definition": "語音學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7f7f7f7f-7f7f-7f7f-7f7f-7f7f7f7f7f7f",
+      "text": "linguistics",
+      "definition": "語言學",
+      "tags": [
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8g8g8g8g-8g8g-8g8g-8g8g-8g8g8g8g8g8g",
+      "text": "archipelago",
+      "definition": "群島",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9h9h9h9h-9h9h-9h9h-9h9h-9h9h9h9h9h9h",
+      "text": "culinary",
+      "definition": "烹飪的",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1i1i1i1i-1i1i-1i1i-1i1i-1i1i1i1i1i1i",
+      "text": "souvenir",
+      "definition": "紀念品",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2j2j2j2j-2j2j-2j2j-2j2j-2j2j2j2j2j2j",
+      "text": "passport",
+      "definition": "護照",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "3k3k3k3k-3k3k-3k3k-3k3k-3k3k3k3k3k3k",
+      "text": "visa",
+      "definition": "簽證",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "4l4l4l4l-4l4l-4l4l-4l4l-4l4l4l4l4l4l",
+      "text": "customs",
+      "definition": "海關",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "5m5m5m5m-5m5m-5m5m-5m5m-5m5m5m5m5m5m",
+      "text": "baggage",
+      "definition": "行李",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "6n6n6n6n-6n6n-6n6n-6n6n-6n6n6n6n6n6n",
+      "text": "currency",
+      "definition": "貨幣",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "7o7o7o7o-7o7o-7o7o-7o7o-7o7o7o7o7o7o",
+      "text": "exchange rate",
+      "definition": "匯率",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "8p8p8p8p-8p8p-8p8p-8p8p-8p8p8p8p8p8p",
+      "text": "local cuisine",
+      "definition": "當地美食",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "9q9q9q9q-9q9q-9q9q-9q9q-9q9q9q9q9q9q",
+      "text": "sightseeing",
+      "definition": "觀光",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1r1r1r1r-1r1r-1r1r-1r1r-1r1r1r1r1r1r",
+      "text": "landmark",
+      "definition": "地標",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2s2s2s2s-2s2s-2s2s-2s2s-2s2s2s2s2s2s",
+      "text": "public transport",
+      "definition": "大眾運輸",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "3t3t3t3t-3t3t-3t3t-3t3t-3t3t3t3t3t3t",
+      "text": "rent a car",
+      "definition": "租車",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "4u4u4u4u-4u4u-4u4u-4u4u-4u4u4u4u4u4u",
+      "text": "jet lag",
+      "definition": "時差",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "5v5v5v5v-5v5v-5v5v-5v5v-5v5v5v5v5v5v",
+      "text": "layover",
+      "definition": "中途停留",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "6w6w6w6w-6w6w-6w6w-6w6w-6w6w6w6w6w6w",
+      "text": "check in",
+      "definition": "報到",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "7x7x7x7x-7x7x-7x7x-7x7x-7x7x7x7x7x7x",
+      "text": "check out",
+      "definition": "退房",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "8y8y8y8y-8y8y-8y8y-8y8y-8y8y8y8y8y8y",
+      "text": "boarding pass",
+      "definition": "登機證",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "9z9z9z9z-9z9z-9z9z-9z9z-9z9z9z9z9z9z",
+      "text": "duty-free",
+      "definition": "免稅的",
+      "tags": [
+        "94b4b4b4-b4b4-94b4b4b4-b4b4-94b4b4b4b4b4"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1a2a3a4a-1a2a-3a4a-5a6a-7a8a9a0a1a2a",
+      "text": "all ears",
+      "definition": "洗耳恭聽",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "1d2d3d4d-1d2d-3d4d-5d6d-7d8d9d0d1d2d",
+      "text": "call it a day",
+      "definition": "今天到此為止",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "1e2e3e4e-1e2e-3e4e-5e6e-7e8e9e0e1e2e",
+      "text": "cut corners",
+      "definition": "偷工減料",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "1f2f3f4f-1f2f-3f4f-5f6f-7f8f9f0f1f2f",
+      "text": "down to earth",
+      "definition": "務實的，腳踏實地的",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1g2g3g4g-1g2g-3g4g-5g6g-7g8g9g0g1g2g",
+      "text": "get out of hand",
+      "definition": "失控",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "1h2h3h4h-1h2h-3h4h-5h6h-7h8h9h0h1h2h",
+      "text": "hang in there",
+      "definition": "堅持下去",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "1j2j3j4j-1j2j-3j4j-5j6j-7j8j9j0j1j2j",
+      "text": "in a nutshell",
+      "definition": "簡而言之",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "b6d6d6d6-d6d6-b6d6d6d6-d6d6-b6d6d6d6d6d6"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "1k2k3k4k-1k2k-3k4k-5k6k-7k8k9k0k1k2k",
+      "text": "keep an eye on",
+      "definition": "留意，密切關注",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "1l2l3l4l-1l2l-3l4l-5l6l-7l8l9l0l1l2l",
+      "text": "let the cat out of the bag",
+      "definition": "洩漏秘密",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1m2m3m4m-1m2m-3m4m-5m6m-7m8m9m0m1m2m",
+      "text": "make a long story short",
+      "definition": "長話短說",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "1n2n3n4n-1n2n-3n4n-5n6n-7n8n9n0n1n2n",
+      "text": "on the same page",
+      "definition": "意見一致",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "1o2o3o4o-1o2o-3o4o-5o6o-7o8o9o0o1o2o",
+      "text": "pull yourself together",
+      "definition": "振作起來",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1p2p3p4p-1p2p-3p4p-5p6p-7p8p9p0p1p2p",
+      "text": "speak of the devil",
+      "definition": "說曹操，曹操到",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "1q2q3q4q-1q2q-3q4q-5q6q-7q8q9q0q1q2q",
+      "text": "take it easy",
+      "definition": "放輕鬆",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "1r2r3r4r-1r2r-3r4r-5r6r-7r8r9r0r1r2r",
+      "text": "under the weather",
+      "definition": "身體不適",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1s2s3s4s-1s2s-3s4s-5s6s-7s8s9s0s1s2s",
+      "text": "when pigs fly",
+      "definition": "絕不可能發生",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "1u2u3u4u-1u2u-3u4u-5u6u-7u8u9u0u1u2u",
+      "text": "cost an arm and a leg",
+      "definition": "非常昂貴",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "1v2v3v4v-1v2v-3v4v-5v6v-7v8v9v0v1v2v",
+      "text": "get cold feet",
+      "definition": "臨陣退縮",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "1w2w3w4w-1w2w-3w4w-5w6w-7w8w9w0w1w2w",
+      "text": "have a change of heart",
+      "definition": "改變心意",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "1x2x3x4x-1x2x-3x4x-5x6x-7x8x9x0x1x2x",
+      "text": "let's agree to disagree",
+      "definition": "我們各持己見吧",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "1y2y3y4y-1y2y-3y4y-5y6y-7y8y9y0y1y2y",
+      "text": "miss the boat",
+      "definition": "錯失良機",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "1z2z3z4z-1z2z-3z4z-5z6z-7z8z9z0z1z2z",
+      "text": "once in a blue moon",
+      "definition": "千載難逢",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2a3a4a5a-2a3a-4a5a-6a7a-8a9a0a1a2a3a",
+      "text": "out of the blue",
+      "definition": "出乎意料地",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "2b3b4b5b-2b3b-4b5b-6b7b-8b9b0b1b2b3b",
+      "text": "piece of cake",
+      "definition": "小菜一碟",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2c3c4c5c-2c3c-4c5c-6c7c-8c9c0c1c2c3c",
+      "text": "pull a fast one",
+      "definition": "欺騙，耍花招",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "2d3d4d5d-2d3d-4d5d-6d7d-8d9d0d1d2d3d",
+      "text": "rain check",
+      "definition": "改期，改天再約",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "2e3e4e5e-2e3e-4e5e-6e7e-8e9e0e1e2e3e",
+      "text": "see eye to eye",
+      "definition": "意見一致",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2f3f4f5f-2f3f-4f5f-6f7f-8f9f0f1f2f3f",
+      "text": "spill the beans",
+      "definition": "洩漏秘密",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2g3g4g5g-2g3g-4g5g-6g7g-8g9g0g1g2g3g",
+      "text": "storm in a teacup",
+      "definition": "小題大作",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "2h3h4h5h-2h3h-4h5h-6h7h-8h9h0h1h2h3h",
+      "text": "the ball is in your court",
+      "definition": "輪到你做決定了",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2i3i4i5i-2i3i-4i5i-6i7i-8i9i0i1i2i3i",
+      "text": "throw in the towel",
+      "definition": "認輸",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "2j3j4j5j-2j3j-4j5j-6j7j-8j9j0j1j2j3j",
+      "text": "up in the air",
+      "definition": "懸而未決",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "2k3k4k5k-2k3k-4k5k-6k7k-8k9k0k1k2k3k",
+      "text": "warm up",
+      "definition": "熱身；預熱",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2l3l4l5l-2l3l-4l5l-6l7l-8l9l0l1l2l3l",
+      "text": "back to the drawing board",
+      "definition": "重新開始",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2m3m4m5m-2m3m-4m5m-6m7m-8m9m0m1m2m3m",
+      "text": "beat around the bush",
+      "definition": "拐彎抹角",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "2n3n4n5n-2n3n-4n5n-6n7n-8n9n0n1n2n3n",
+      "text": "by the skin of one's teeth",
+      "definition": "僥倖成功",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2o3o4o5o-2o3o-4o5o-6o7o-8o9o0o1o2o3o",
+      "text": "couch potato",
+      "definition": "懶骨頭",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "2p3p4p5p-2p3p-4p5p-6p7p-8p9p0p1p2p3p",
+      "text": "don't count your chickens before they hatch",
+      "definition": "不要過早樂觀",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "2e3e4e5e-2e3e-4e5e-6e7e-8e9e0e1e2e3e",
+      "text": "see eye to eye",
+      "definition": "意見一致",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2f3f4f5f-2f3f-4f5f-6f7f-8f9f0f1f2f3f",
+      "text": "spill the beans",
+      "definition": "洩漏秘密",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2g3g4g5g-2g3g-4g5g-6g7g-8g9g0g1g2g3g",
+      "text": "storm in a teacup",
+      "definition": "小題大作",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "2h3h4h5h-2h3h-4h5h-6h7h-8h9h0h1h2h3h",
+      "text": "the ball is in your court",
+      "definition": "輪到你做決定了",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2i3i4i5i-2i3i-4i5i-6i7i-8i9i0i1i2i3i",
+      "text": "throw in the towel",
+      "definition": "認輸",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "2j3j4j5j-2j3j-4j5j-6j7j-8j9j0j1j2j3j",
+      "text": "up in the air",
+      "definition": "懸而未決",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    },
+    {
+      "id": "2k3k4k5k-2k3k-4k5k-6k7k-8k9k0k1k2k3k",
+      "text": "warm up",
+      "definition": "熱身；預熱",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 1
+    },
+    {
+      "id": "2l3l4l5l-2l3l-4l5l-6l7l-8l9l0l1l2l3l",
+      "text": "back to the drawing board",
+      "definition": "重新開始",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "a5c5c5c5-c5c5-c5c5-c5c5-a5c5c5c5c5c5"
+      ],
+      "unfamiliarity": 0
+    },
+    {
+      "id": "2m3m4m5m-2m3m-4m5m-6m7m-8m9m0m1m2m3m",
+      "text": "beat around the bush",
+      "definition": "拐彎抹角",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 5
+    },
+    {
+      "id": "2n3n4n5n-2n3n-4n5n-6n7n-8n9n0n1n2n3n",
+      "text": "by the skin of one's teeth",
+      "definition": "僥倖成功",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181"
+      ],
+      "unfamiliarity": 4
+    },
+    {
+      "id": "2o3o4o5o-2o3o-4o5o-6o7o-8o9o0o1o2o3o",
+      "text": "couch potato",
+      "definition": "懶骨頭",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 3
+    },
+    {
+      "id": "2p3p4p5p-2p3p-4p5p-6p7p-8p9p0p1p2p3p",
+      "text": "don't count your chickens before they hatch",
+      "definition": "不要過早樂觀",
+      "tags": [
+        "61818181-8181-8181-8181-618181818181",
+        "c7e7e7e7-e7e7-e7e7-e7e7-c7e7e7e7e7e7"
+      ],
+      "unfamiliarity": 2
+    }
   ]
 }

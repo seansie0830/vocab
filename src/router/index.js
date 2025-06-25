@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import QuizPrint from '../views/QuizPrint.vue';
-import QuizConfig from '../views/QuizConfig.vue';
+
 
 const routes = [
   {
@@ -33,6 +31,18 @@ const routes = [
     name: 'Settings',
     component: () => import('../views/Settings.vue'),
     meta: { title: '設定' }
+  },
+  {
+    path: '/quiz-run', // <-- 新增這一行
+    name: 'OnlineQuizRun', // <-- 新增這一行
+    component: () => import('../views/OnlineQuizRun.vue'), // <-- 新增這一行
+    meta: { title: '線上考卷測驗' } // <-- 新增
+  },
+  {
+    path: '/quizChoice',
+    name: 'QuizChoice',
+    component: () => import('../views/QuizChoice.vue'),
+    meta: { title: '選擇題考卷' }
   }
 ];
 

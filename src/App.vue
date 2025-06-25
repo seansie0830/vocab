@@ -18,9 +18,9 @@
 
     <!-- 我們可以預留一個頁尾的位置 -->
   </div>
-    <footer class="bg-light text-center text-lg-start mt-auto my-3">
+    <footer class="bg-light text-center text-lg-start mt-auto py-3">
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2025 Copyright: 單字記憶工具
+        © 2025 Copyright: 單字記憶工具 
       </div>
     </footer>
 </template>
@@ -41,7 +41,7 @@ export default {
 	margin-left: auto;
 	margin-right : auto;
 	max-width : 1200px;
-	top-margin : 60px;
+	margin-top : 60px;
 }
 AppHeader{
 	position:relative;

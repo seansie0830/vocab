@@ -9,6 +9,7 @@ const initialState = {
     questions: [],
     config: {}
   },
+  appSettings: {}
 };
 
 const store = createStore({

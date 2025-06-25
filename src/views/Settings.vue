@@ -119,35 +119,60 @@
 [...在這裡貼上你的文章...]
 ---
 </code></pre>
-                        <button @click="copyPrompt" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" style="--bs-btn-padding-y: .1rem; --bs-btn-padding-x: .4rem; --bs-btn-font-size: .75rem;">
-                            <i class="bi me-1" :class="copySuccess ? 'bi-check-lg text-success' : 'bi-clipboard-plus'"></i>
-                            {{ copySuccess ? '已複製' : '複製' }}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Reset Section -->
-        <h2 class="h4 mt-5 mb-3 text-danger"><i class="bi bi-exclamation-triangle-fill me-2"></i>危險區域</h2>
-        <div class="list-group">
-           <a href="#" @click.prevent="clearAllData" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-            <div>
-              <p class="mb-1 fw-bold text-danger">清空所有資料</p>
-              <small class="text-muted">永久刪除所有單字與標籤，此操作無法復原。</small>
-            </div>
-            <i class="bi bi-chevron-right text-danger"></i>
-          </a>
-           <a href="#" @click.prevent="restoreDefaults" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-            <div>
-              <p class="mb-1 fw-bold text-danger">還原為預設資料</p>
-              <small class="text-muted">清空您的個人資料，並重新載入應用程式內建的初始單字庫。</small>
-            </div>
-            <i class="bi bi-chevron-right text-danger"></i>
-          </a>
+            <button @click="copyPrompt" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" style="--bs-btn-padding-y: .1rem; --bs-btn-padding-x: .4rem; --bs-btn-font-size: .75rem;">
+              <i class="bi me-1" :class="copySuccess ? 'bi-check-lg text-success' : 'bi-clipboard-plus'"></i>
+              {{ copySuccess ? '已複製' : '複製' }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+    
+
+    <!-- Reset Section -->
+    <h2 class="h4 mt-5 mb-3 text-danger"><i class="bi bi-exclamation-triangle-fill me-2"></i>危險區域</h2>
+    <div class="list-group">
+       <a href="#" @click.prevent="clearAllData" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      <div>
+        <p class="mb-1 fw-bold text-danger">清空所有資料</p>
+        <small class="text-muted">永久刪除所有單字與標籤，此操作無法復原。</small>
+      </div>
+      <i class="bi bi-chevron-right text-danger"></i>
+      </a>
+       <a href="#" @click.prevent="restoreDefaults" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      <div>
+        <p class="mb-1 fw-bold text-danger">還原為預設資料</p>
+        <small class="text-muted">清空您的個人資料，並重新載入應用程式內建的初始單字庫。</small>
+      </div>
+      <i class="bi bi-chevron-right text-danger"></i>
+      </a>
+    </div>
+    <!-- Save Changes Button -->
+    <form @submit.prevent="saveSettings">
+      <div class="d-flex justify-content-end my-4">
+        <button type="submit" class="btn btn-primary">
+          儲存變更
+        </button>
+      </div>
+      <div 
+        class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-4"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        :class="{ show: saveSuccess, hide: !saveSuccess }"
+        style="z-index: 1080; min-width: 220px;"
+      >
+        <div class="d-flex">
+          <div class="toast-body text-center w-100">
+        設定已儲存！
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" @click="saveSuccess = false" aria-label="Close"></button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -163,6 +188,9 @@ const copySuccess = ref(false);
 const collapseElement = ref(null); // FIX: Create a ref for the collapse element
 let collapseInstance = null; // FIX: Variable to hold the instance
 const APP_VERSION = "1.0";
+
+// Save feedback state
+const saveSuccess = ref(false);
 
 // --- Lifecycle Hooks to manage the Collapse instance ---
 onMounted(() => {
@@ -306,6 +334,14 @@ const restoreDefaults = () => {
     store.dispatch('restoreDefaults');
     alert('已成功還原為初始資料。');
   }
+};
+
+// --- Save Settings Function ---
+const saveSettings = () => {
+  // TODO: Collect and save settings (theme, font size, words per page, etc.)
+  // Example: store.dispatch('saveSettings', { ... });
+  saveSuccess.value = true;
+  setTimeout(() => { saveSuccess.value = false; }, 2000);
 };
 </script>
 

@@ -47,25 +47,28 @@
             </div>
 
             <!-- Tag List Container -->
-            <div class="tag-list-container border rounded p-2" style="max-height: 200px; overflow-y: auto;">
+            <div 
+              class="tag-list-container border rounded p-2" 
+              style="max-height: 200px; overflow-y: auto; scrollbar-color: #dee2e6 #f8f9fa; scrollbar-width: thin;"
+            >
               <div v-if="tagMode === 'add'">
-                <!-- MODIFICATION: "Create new" suggestion is now always visible in 'add' mode when there is text -->
-                <div v-if="showCreateSuggestion" class="suggestion-item" @click="handleAddNewTag">
-                  <i class="bi bi-plus-circle me-2"></i>
-                  <span>建立新標籤: "<b>{{ tagSearchQuery.trim() }}</b>"</span>
+              <!-- MODIFICATION: "Create new" suggestion is now always visible in 'add' mode when there is text -->
+              <div v-if="showCreateSuggestion" class="suggestion-item" @click="handleAddNewTag">
+                <i class="bi bi-plus-circle me-2"></i>
+                <span>建立新標籤: "<b>{{ tagSearchQuery.trim() }}</b>"</span>
+              </div>
+              <div v-for="tag in filteredAvailableTags" :key="tag.id" class="d-flex justify-content-between align-items-center form-check py-1 hover-highlight">
+                <div>
+                <input class="form-check-input" type="checkbox" :id="`tag-add-${tag.id}`" :value="tag.id" v-model="editableWord.tags">
+                <label class="form-check-label ms-2" :for="`tag-add-${tag.id}`">{{ tag.name }}</label>
                 </div>
-                <div v-for="tag in filteredAvailableTags" :key="tag.id" class="d-flex justify-content-between align-items-center form-check py-1 hover-highlight">
-                  <div>
-                    <input class="form-check-input" type="checkbox" :id="`tag-add-${tag.id}`" :value="tag.id" v-model="editableWord.tags">
-                    <label class="form-check-label ms-2" :for="`tag-add-${tag.id}`">{{ tag.name }}</label>
-                  </div>
-                  <button type="button" class="btn btn-sm btn-outline-danger" @click.stop.prevent="handleDeleteTag(tag.id)">
-                    <i class="bi bi-trash"></i>
-                  </button>
-                </div>
-                <div v-if="filteredAvailableTags.length === 0 && !showCreateSuggestion" class="text-muted text-center p-3">
-                  <p>沒有可新增的標籤。</p>
-                </div>
+                <button type="button" class="btn btn-sm btn-outline-danger" @click.stop.prevent="handleDeleteTag(tag.id)">
+                <i class="bi bi-trash"></i>
+                </button>
+              </div>
+              <div v-if="filteredAvailableTags.length === 0 && !showCreateSuggestion" class="text-muted text-center p-3">
+                <p>沒有可新增的標籤。</p>
+              </div>
               </div>
 
               <div v-if="tagMode === 'manage'">
