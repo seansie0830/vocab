@@ -43,6 +43,17 @@ const routes = [
     name: 'QuizChoice',
     component: () => import('../views/QuizChoice.vue'),
     meta: { title: '選擇題考卷' }
+  },
+  {
+    path: '/calendar',
+    name: 'Calendar',
+    // 使用動態引入 (Lazy Loading)
+    component: () => import('../views/CalendarView.vue'), // 修改這一行
+  },
+  {
+    path: '/aiPrompt',
+    name: 'AiPrompt',
+    component: () => import('../views/aiPrompt.vue'),
   }
 ];
 

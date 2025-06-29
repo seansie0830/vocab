@@ -96,6 +96,7 @@ watch(currentQuiz, (newQuiz) => {
   if (newQuiz && newQuiz.questions && newQuiz.questions.length > 0) {
     // Only (re)initialize if answeredQuestions is empty OR if the quiz content actually changed
     // A simple check for quiz questions array reference equality. For complex objects, deep clone/compare might be needed.
+    // newQuiz is just the updated currentQuiz from the stor
     const currentQuestionIds = answeredQuestions.value.map(q => q.id).sort().join(',');
     const newQuestionIds = newQuiz.questions.map(q => q.id).sort().join(',');
 

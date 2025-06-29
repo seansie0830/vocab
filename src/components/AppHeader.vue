@@ -16,6 +16,14 @@
           <li class="nav-item">
             <router-link class="nav-link" active-class="active" to="/quiz-config">產生考卷</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/calendar" active-class="active" class="nav-link">
+              月曆
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" active-class="active" to="/aiPrompt">AI+✨</router-link>
+          </li>
         </ul>
         <!-- MODIFIED: Replaced the old component with a link to the new settings page -->
         <ul class="navbar-nav">
@@ -25,6 +33,7 @@
             </router-link>
           </li>
         </ul>
+        
       </div>
     </div>
   </nav>
