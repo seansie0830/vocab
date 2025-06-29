@@ -7,12 +7,14 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "test": "vitest"
+        "test": "vitest",
+        "init-tailwind": "node ./node_modules/tailwindcss/lib/cli.js init -p"
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.7",
         "bootstrap-icons": "^1.13.1",
+        "lodash": "^4.17.21",
         "uuid": "^11.1.0",
         "vue": "^3.5.13",
         "vue-router": "4",
@@ -22,8 +24,11 @@
         "@tauri-apps/cli": "^2.5.0",
         "@vitejs/plugin-vue": "^5.2.3",
         "@vue/test-utils": "^2.4.6",
+        "autoprefixer": "^10.4.21",
         "jsdom": "^26.1.0",
         "lightningcss": "^1.30.1",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^4.1.10",
         "vite": "^6.3.5",
         "vitest": "^3.2.4"
     }

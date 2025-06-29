@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%; z-index: 1030;">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <i class="bi bi-card-checklist me-2"></i>

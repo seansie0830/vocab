@@ -213,6 +213,13 @@ onMounted(() => {
 onUnmounted(() => {
   modalInstance?.dispose();
   modalInstance = null;
+  document.body.classList.remove('modal-open');
+  document.body.style.overflow = '';
+  document.body.style.paddingRight = ''; // Explicitly remove padding-right
+  const backdrops = document.getElementsByClassName('modal-backdrop');
+  while (backdrops.length > 0) {
+    backdrops[0].parentNode.removeChild(backdrops[0]);
+  }
 });
 
 watch(() => props.show, (newVal) => {
@@ -221,8 +228,10 @@ watch(() => props.show, (newVal) => {
     tagMode.value = (props.word?.tags?.length > 0) ? 'manage' : 'add';
     tagSearchQuery.value = '';
     modalInstance?.show();
+    document.documentElement.classList.add('modal-open'); // Add class to html element
   } else {
     modalInstance?.hide();
+    document.documentElement.classList.remove('modal-open'); // Remove class from html element
   }
 });
 

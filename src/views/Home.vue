@@ -1,10 +1,14 @@
 <template>
   <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-      <h2 class="mb-0">單字列表</h2>
-      <button class="btn btn-primary" @click="openModalForNew">
-        <i class="bi bi-plus-circle-fill me-2"></i>新增單字
-      </button>
+      <h1 class="mb-0 w-100 text-start">單字列表</h1>
+      <div class="ms-auto">
+        <div class="d-flex flex-column align-items-center">
+          <button class="btn btn-primary mt-2" @click="openModalForNew">
+            <i class="bi bi-plus-circle-fill me-2"></i>新增單字
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Use the WordSearch component with v-model -->
@@ -19,7 +23,7 @@
           <!-- MODIFIED: Added a wrapper for the title and the new badge -->
           <div class="d-flex align-items-center mb-1">
             <h5 class="mb-0 me-3">{{ word.text }}</h5>
-            <span 
+            <span
                 class="badge rounded-pill fw-normal ms-auto"
               :class="getUnfamiliarityInfo(word.unfamiliarity).cssClass">
                 {{ getUnfamiliarityInfo(word.unfamiliarity).text }}
@@ -27,11 +31,24 @@
           </div>
           <p class="mb-1 text-secondary">{{ word.definition }}</p>
           <div v-if="word.tags && word.tags.length > 0" class="mt-2">
-            <span v-for="tag in getDisplayTags(word.tags)" :key="tag.id || 'more-tags-indicator'" 
-                  class="badge rounded-pill me-1"
-                  :class="tag.name === '...' ? 'bg-secondary' : getTagColorClass(tag.id)">
-              {{ tag.name }}
-            </span>
+            <!-- MODIFIED: Changed <span> to <router-link> for actual tags -->
+            <template v-for="tag in getDisplayTags(word.tags)" :key="tag.id || 'more-tags-indicator'">
+              <router-link
+                v-if="tag.name !== '...'"
+                :to="{ path: '/', query: { keyword: `#${tag.name}`, page: 1 } }"
+                class="badge rounded-pill me-1 tag-link"
+                :class="getTagColorClass(tag.id)"
+              >
+                {{ tag.name }}
+              </router-link>
+              <span
+                v-else
+                class="badge rounded-pill me-1"
+                :class="tag.name === '...' ? 'bg-secondary' : getTagColorClass(tag.id)"
+              >
+                {{ tag.name }}
+              </span>
+            </template>
           </div>
         </div>
         <div class="word-actions mt-2 mt-md-0">
@@ -73,26 +90,26 @@
 
 
     <!-- Word Editor Modal -->
-    <WordEditorModal 
+    <WordEditorModal
       v-if="showModal"
-      :show="showModal" 
-      :word="editingWord" 
-      @close="closeModal" 
-      @save="handleSave" 
+      :show="showModal"
+      :word="editingWord"
+      @close="closeModal"
+      @save="handleSave"
     />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue'; // 引入 onMounted
 import { useStore } from 'vuex';
-import { useRoute, useRouter } from 'vue-router'; // 引入 useRoute 和 useRouter
+import { useRoute, useRouter } from 'vue-router';
 import WordEditorModal from '../components/WordEditorModal.vue';
-import WordSearch from '../components/wordSearch.vue';
+import WordSearch from '../components/WordSearch.vue'; // Corrected component name to PascalCase
 
 const store = useStore();
-const route = useRoute(); // 獲取當前路由對象
-const router = useRouter(); // 獲取路由實例
+const route = useRoute();
+const router = useRouter();
 
 const showModal = ref(false);
 const editingWord = ref(null);
@@ -100,16 +117,16 @@ const editingWord = ref(null);
 // --- 搜尋功能相關 (與 URL query 同步) ---
 const searchQuery = computed({
   get() {
-    // 從 URL 的 query 參數中獲取 'keyword'，如果沒有則預設為空字串
     return route.query.keyword || '';
   },
   set(newValue) {
-    // 當 searchQuery 被修改時 (例如由 WordSearch 組件的 v-model 更新)，
-    // 使用 router.push 更新 URL 的 query 參數
+    // 確保這裡的 router.push 只更新 URL，不直接觸發 Vuex 搜尋，
+    // 因為 Vuex 搜尋會由 WordSearch 組件內部觸發，或在 Home 組件 onMounted 時觸發。
+    // 這樣可以避免重複搜尋。
     router.push({
       query: {
-        ...route.query, // 保留所有現有的 query 參數
-        keyword: newValue || undefined, // 設定新的關鍵字。如果為空，則使用 undefined 讓參數從 URL 中移除
+        ...route.query,
+        keyword: newValue || undefined,
         page: 1 // 執行新的搜尋時，將頁碼重設為第一頁
       }
     });
@@ -117,70 +134,51 @@ const searchQuery = computed({
 });
 
 // --- 分頁功能相關 (與 URL query 同步) ---
-// currentPage 也改為計算屬性，讀取和寫入 URL 的 'page' 參數
 const currentPage = computed({
   get() {
-    // 從 URL 的 query 參數中獲取 'page'，如果沒有則預設為 '1'
     const page = parseInt(route.query.page || '1');
-    // 確保解析結果為有效數字且大於等於 1
     return isNaN(page) || page < 1 ? 1 : page;
   },
   set(newPage) {
-    // 當 currentPage 被修改時 (例如點擊分頁按鈕)，
-    // 使用 router.push 更新 URL 的 query 參數
     router.push({
       query: {
-        ...route.query, // 保留所有現有的 query 參數
-        page: newPage // 設定新的頁碼
+        ...route.query,
+        page: newPage
       }
     });
   }
 });
 
-const itemsPerPage = ref(10); // 每頁顯示 10 個單字
-const pageRange = 5; // 分頁顯示的頁碼範圍 (例如：當前頁碼前後各2頁)
+const itemsPerPage = ref(10);
+const pageRange = 5;
 
-const words = computed(() => store.state.words);
-const allTags = computed(() => store.state.tags);
+// 修改 words 為從 store.state.queryResult 獲取，而不是 store.state.words
+const words = computed(() => store.state.queryResult); // 現在 paginatedWords 會基於搜尋結果
 
-const filteredWords = computed(() => {
-  // filteredWords 現在會直接反應 searchQuery (也就是 URL 中的 keyword)
-  const query = searchQuery.value.trim().toLowerCase();
-  if (!query) {
-    return words.value;
-  }
-  return words.value.filter(word => 
-    word.text.toLowerCase().includes(query) || 
-    word.definition.toLowerCase().includes(query)
-  );
-});
-
-// 監聽 filteredWords 的變化。當搜尋結果改變時，自動重設頁碼為 1
+// 監聽搜尋結果 (words) 的變化。當搜尋結果改變時，自動重設頁碼為 1
 // 由於 currentPage 現在是一個會更新 URL 的計算屬性，這裡會自動同步 URL
-watch(filteredWords, () => {
+watch(words, () => {
   // 只有當當前頁碼不是 1 時才觸發更新，避免不必要的路由導航
   if (currentPage.value !== 1) {
-    currentPage.value = 1; 
+    currentPage.value = 1;
   }
 }, { immediate: true }); // 在組件載入時立即執行一次
 
 const totalPages = computed(() => {
-  return Math.ceil(filteredWords.value.length / itemsPerPage.value);
+  return Math.ceil(words.value.length / itemsPerPage.value);
 });
 
 const paginatedWords = computed(() => {
   const startIndex = (currentPage.value - 1) * itemsPerPage.value;
   const endIndex = startIndex + itemsPerPage.value;
-  return filteredWords.value.slice(startIndex, endIndex);
+  return words.value.slice(startIndex, endIndex);
 });
 
-// Computed property for generating pagination page numbers
 const paginationPages = computed(() => {
   const pages = [];
   let startPage = Math.max(1, currentPage.value - Math.floor(pageRange / 2));
   let endPage = Math.min(totalPages.value, startPage + pageRange - 1);
 
-  // Adjust startPage if endPage hits totalPages and range is not full
   if (endPage - startPage + 1 < pageRange) {
     startPage = Math.max(1, endPage - pageRange + 1);
   }
@@ -191,11 +189,9 @@ const paginationPages = computed(() => {
   return pages;
 });
 
-// goToPage, prevPage, nextPage 這些方法會修改 currentPage，
-// 由於 currentPage 現在會更新 URL，因此這些方法間接實現了 URL 同步。
 const goToPage = (page) => {
   if (page >= 1 && page <= totalPages.value) {
-    currentPage.value = page; // 修改 currentPage 會觸發其 setter，進而更新 URL
+    currentPage.value = page;
   }
 };
 
@@ -210,8 +206,8 @@ const nextPage = () => {
 
 // --- Helper for Unfamiliarity Badge ---
 const getUnfamiliarityInfo = (unfamiliarityScore) => {
-  const score = unfamiliarityScore || 0; // Default to 0 if undefined
-  
+  const score = unfamiliarityScore || 0;
+
   if (score === 0) {
     return { cssClass: 'unfamiliarity-0', text: '已熟悉' };
   }
@@ -253,6 +249,8 @@ const handleDelete = (wordId) => {
   store.dispatch('deleteWord', wordId);
 };
 
+const allTags = computed(() => store.state.tags);
+
 const tagColorClasses = [
   'tag-color-1', 'tag-color-2', 'tag-color-3', 'tag-color-4', 'tag-color-5', 'tag-color-6'
 ];
@@ -265,26 +263,32 @@ const getTagColorClass = (tagId) => {
   if (tagIndex === -1) {
     return 'bg-secondary';
   }
-  
+
   const colorIndex = tagIndex % tagColorClasses.length;
   return tagColorClasses[colorIndex];
 };
 
 const getDisplayTags = (tagIds) => {
   if (!tagIds || tagIds.length === 0) return [];
-  
+
   const tags = tagIds
     .map(tagId => allTags.value.find(tag => tag.id === tagId))
     .filter(Boolean);
-  
+
   const TAG_LIMIT = 5;
   if (tags.length > TAG_LIMIT) {
     const limitedTags = tags.slice(0, TAG_LIMIT);
     return [...limitedTags, { id: null, name: '...' }];
   }
-  
+
   return tags;
 };
+
+onMounted(() => {
+  // 確保在組件掛載時，根據 URL 中的 keyword 觸發一次搜尋
+  // 雖然 WordSearch 組件內也會觸發，但這裡再確保一下，以防萬一
+  store.dispatch('performSearch', searchQuery.value);
+});
 
 </script>
 
@@ -318,6 +322,18 @@ const getDisplayTags = (tagIds) => {
 .badge.tag-color-4 { background-color: #dc3545; color: white; }
 .badge.tag-color-5 { background-color: #fd7e14; color: white; }
 .badge.tag-color-6 { background-color: #6c757d; color: white; }
+
+/* Styles for tag links */
+.tag-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from badge */
+  cursor: pointer;
+}
+
+.tag-link:hover {
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
 
 /* --- Unfamiliarity Badge Colors --- */
 .badge.unfamiliarity-0 { background-color:rgb(217, 255, 236); color:rgb(73, 87, 75); border: 1px solid #dee2e6;}

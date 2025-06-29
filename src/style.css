@@ -30,6 +30,15 @@ a:hover {
 */
 body {
   margin: 0;
+  overflow-y: scroll; /* Always show scrollbar to prevent content shift */
+}
+
+html.modal-open {
+  overflow: hidden;
+}
+
+body.modal-open {
+  padding-right: 0 !important; /* Prevent page shift when modal is open */
 }
 
 h1 {
